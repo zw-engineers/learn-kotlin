@@ -1,7 +1,9 @@
 fun main(args: Array<String>) {
     println("Hello World")
 
-    /*VARIABLES*/
+    println()
+    println("/*VARIABLES*/")
+    println("==============")
 
 //    Val = Immutable/Read only variable
     val name = "Artemas"
@@ -20,7 +22,9 @@ fun main(args: Array<String>) {
     println("Biggest Int: " + bigInt)
     println("Smallest Int: $smallInt") // String interpolation
 
-    /*TYPES*/
+    println()
+    println("/*TYPES*/")
+    println("==============")
 
 //    Long
     val bigLong: Long = Long.MAX_VALUE
@@ -61,12 +65,16 @@ fun main(args: Array<String>) {
     val letterGrade: Char = 'A'
     println("A is a Char: ${letterGrade is Char}")
 
-    /*CASTING*/
+    println()
+    println("/*CASTING*/")
+    println("==============")
     println("3.14 to Int: " + (3.14.toInt()))
     println("A to Int: " + ('A'.toInt()))
     println("65 to Char: "+ 65.toChar())
 
-    /*STRINGS*/
+    println()
+    println("/*STRINGS*/")
+    println("==============")
     val myName = "Artemas Muzanenhamo"
     val longStr = """This is a
         |long string
@@ -100,4 +108,18 @@ fun main(args: Array<String>) {
     println("Index 2 - 7: ${str1.subSequence(2, 8)}")
 //    Check if String contains
     println("Contains the word random : ${str1.contains("Random")}")
+
+    println()
+    println("/*ARRAYS*/")
+    println("==============")
+
+    val myArray = arrayOf(1, 1.23, "Artemas")
+    println(myArray)
+    myArray[1] = 3.14
+    println("Array length: ${myArray.size}")
+    println("Doug in Array: ${myArray.contains("Doug")}")
+
+    val partArray = myArray.copyOfRange(0, 1)
+    println("First: ${myArray.first()}")
+    println("Artemas index: ${myArray.indexOf("Artemas")}")
 }
