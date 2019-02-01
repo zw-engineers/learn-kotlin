@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main(args: Array<String>) {
     println("Hello World")
 
@@ -70,7 +72,7 @@ fun main(args: Array<String>) {
     println("==============")
     println("3.14 to Int: " + (3.14.toInt()))
     println("A to Int: " + ('A'.toInt()))
-    println("65 to Char: "+ 65.toChar())
+    println("65 to Char: " + 65.toChar())
 
     println()
     println("/*STRINGS*/")
@@ -128,7 +130,7 @@ fun main(args: Array<String>) {
     println("==============")
 
 //    Sqaure Array
-    val sqArray = Array(5) { x -> x * x}
+    val sqArray = Array(5) { x -> x * x }
     println(sqArray[2]) // Because 4 = 2 * 2
 
 //    Typed Array
@@ -174,8 +176,8 @@ fun main(args: Array<String>) {
     }
 
 //    When
-    when (myAge){
-        0,1,2,3,4 -> println("Go to Preschool")
+    when (myAge) {
+        0, 1, 2, 3, 4 -> println("Go to Preschool")
 
         5 -> println("Go to Kindergarten")
 
@@ -185,5 +187,44 @@ fun main(args: Array<String>) {
         }
 
         else -> println("Go to College")
+    }
+
+    println()
+    println("/*LOOPING*/")
+    println("==============")
+
+    for (x in 1..10) {
+        println("Loop : $x")
+    }
+
+    val rand = Random()
+    val magicNum = rand.nextInt(50) + 1
+
+    var guess = 0
+
+    while (magicNum != guess) {
+        guess += 1
+    }
+
+    println("Magic Number was $guess")
+
+    for (x in 1..20) {
+        if (x % 2 == 0) {
+            continue
+        }
+
+        println("Odd : $x")
+
+        if (x == 15) break
+    }
+
+    val arr3: Array<Int> = arrayOf(3, 6, 9)
+
+    for (i in arr3.indices) {
+        println("Multi 3 : ${arr3[i]}")
+    }
+
+    for ((index, value) in arr3.withIndex()) {
+        println("Index : $index Value : $value")
     }
 }
