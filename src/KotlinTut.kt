@@ -45,3 +45,8 @@ fun getStudentsStudyingEnglish(): List<Student> {
             .sequential()
             .toList()
 }
+
+// TODO: Grouping by Age
+// TODO: Grouping by Subject Name
+// TODO: Grouping by First Name
+// TODO: Grouping by Last Name
