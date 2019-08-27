@@ -3,6 +3,7 @@ import kotlin.streams.toList
 fun main(args: Array<String>) {
     println(getNumbersLessThan10())
     println(getLetterUpperCasedAndOrdered())
+    println(getStudentsStudyingEnglish())
 }
 
 fun getNumbersLessThan10(): List<Int> {
@@ -29,8 +30,18 @@ data class Student(
         val subjects: List<String>
 )
 
-fun generatedStudents() {
+fun generatedStudents(): List<Student> {
     val artemas = Student("Artemas", "Muzanenhamo", 29, listOf("English", "Computer Science", "Mathematics"))
     val thomas = Student("Thomas", "Jenkins", 32, listOf("Geography", "English", "Law"))
     val kirsty = Student("Kirsty", "Smith", 30, listOf("Bio-Chemistry", "Mathematics", "Information Systems"))
+
+    return listOf(artemas, kirsty, thomas)
+}
+
+fun getStudentsStudyingEnglish(): List<Student> {
+    return generatedStudents()
+            .stream()
+            .filter { it.subjects.contains("English") }
+            .sequential()
+            .toList()
 }
