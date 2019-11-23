@@ -27,4 +27,16 @@ class CapitaliseNamesTest() {
 
         assertThat(capitalisedNames).isEmpty()
     }
+
+    @Test
+    @DisplayName("Should return all non null names in uppercase")
+    fun returnNonNullNames() {
+        val names = listOf("artemas", "takudzwa", null, "shawn", "sarah")
+
+        val capitalisedNames = capitaliseNames.capitalise(names)
+
+        assertThat(capitalisedNames).isNotEmpty
+        assertThat(capitalisedNames).hasSize(4)
+        assertThat(capitalisedNames).containsExactly("ARTEMAS", "TAKUDZWA", "SHAWN", "SARAH")
+    }
 }
