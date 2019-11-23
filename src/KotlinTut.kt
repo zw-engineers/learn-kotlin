@@ -1,9 +1,12 @@
+import java.util.stream.Collectors
+import java.util.stream.Collectors.mapping
 import kotlin.streams.toList
 
 fun main(args: Array<String>) {
     println(getNumbersLessThan10())
     println(getLetterUpperCasedAndOrdered())
     println(getStudentsStudyingEnglish())
+    println(getStudentsStudyingMathsGroupByAgeDesc())
 }
 
 fun getNumbersLessThan10(): List<Int> {
@@ -47,6 +50,24 @@ fun getStudentsStudyingEnglish(): List<Student> {
 }
 
 // TODO: Grouping by Age
+fun getStudentsStudyingMathsGroupByAgeDesc(): Map<List<Int>, List<Student>> {
+
+//    Collectors.groupingBy(
+//            Function<Any, Any> { Student.getDepartment() },
+//            Collectors.counting<Any>()
+//    )
+
+    return generatedStudents()
+            .stream()
+            .filter { it.subjects.contains("Mathematics") }
+            .collect(Collectors.groupingBy {
+                Student::subjects,
+                // TODO:
+                mapping(Student::age, Collectors.toList<>())
+            })
+}
+
+
 // TODO: Grouping by Subject Name
 // TODO: Grouping by First Name
 // TODO: Grouping by Last Name
