@@ -19,4 +19,12 @@ class CapitaliseNamesTest() {
         assertThat(capitalisedNames).hasSize(5)
         assertThat(capitalisedNames).containsExactly("ARTEMAS", "TAKUDZWA", "MUZANENHAMO", "SHAWN", "SARAH")
     }
+
+    @Test
+    @DisplayName("Should return an empty list if names list is null")
+    fun emptyNamesList() {
+        val capitalisedNames = capitaliseNames.capitalise(null)
+
+        assertThat(capitalisedNames).isEmpty()
+    }
 }
