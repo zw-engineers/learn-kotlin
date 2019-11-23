@@ -1,3 +1,5 @@
+package main.kotlin.learn.kotlin.playground
+
 fun main(args: Array<String>) {
     println()
     println("/*COLLECTIONS*/")

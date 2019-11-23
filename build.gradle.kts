@@ -30,6 +30,6 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
+    // Define the main.kotlin.learn.kotlin.playground.main class for the application.
     mainClassName = "learn.kotlin.AppKt"
 }

@@ -1,3 +1,5 @@
+package main.kotlin.learn.kotlin.playground
+
 import java.util.stream.Collectors
 import java.util.stream.Collectors.mapping
 import kotlin.streams.toList
@@ -53,7 +55,7 @@ fun getStudentsStudyingEnglish(): List<Student> {
 fun getStudentsStudyingMathsGroupByAgeDesc(): Map<List<Int>, List<Student>> {
 
 //    Collectors.groupingBy(
-//            Function<Any, Any> { Student.getDepartment() },
+//            Function<Any, Any> { main.kotlin.learn.kotlin.playground.Student.getDepartment() },
 //            Collectors.counting<Any>()
 //    )
 
