@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
     println(getNumbersLessThan10())
     println(getLetterUpperCasedAndOrdered())
     println(getStudentsStudyingEnglish())
-    println(getStudentsStudyingMathsGroupByAgeDesc())
+//    println(getStudentsStudyingMathsGroupByAgeDesc())
 }
 
 fun getNumbersLessThan10(): List<Int> {
@@ -52,22 +52,22 @@ fun getStudentsStudyingEnglish(): List<Student> {
 }
 
 // TODO: Grouping by Age
-fun getStudentsStudyingMathsGroupByAgeDesc(): Map<List<Int>, List<Student>> {
-
-//    Collectors.groupingBy(
-//            Function<Any, Any> { main.kotlin.learn.kotlin.playground.Student.getDepartment() },
-//            Collectors.counting<Any>()
-//    )
-
-    return generatedStudents()
-            .stream()
-            .filter { it.subjects.contains("Mathematics") }
-            .collect(Collectors.groupingBy {
-                Student::subjects,
-                // TODO:
-                mapping(Student::age, Collectors.toList<>())
-            })
-}
+//fun getStudentsStudyingMathsGroupByAgeDesc(): Map<List<Int>, List<Student>> {
+//
+////    Collectors.groupingBy(
+////            Function<Any, Any> { main.kotlin.learn.kotlin.playground.Student.getDepartment() },
+////            Collectors.counting<Any>()
+////    )
+//
+//    return generatedStudents()
+//            .stream()
+//            .filter { it.subjects.contains("Mathematics") }
+//            .collect(Collectors.groupingBy {
+//                Student::subjects,
+//                // TODO:
+////                mapping(Student::age, Collectors.toList<>())
+//            })
+//}
 
 
 // TODO: Grouping by Subject Name
