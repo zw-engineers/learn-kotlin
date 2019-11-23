@@ -22,6 +22,9 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
+
+    // Use assertJ core for test assertions
+    testImplementation("org.assertj:assertj-core:3.14.0")
 }
 
 tasks.test {
