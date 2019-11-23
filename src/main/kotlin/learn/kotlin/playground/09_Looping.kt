@@ -1,4 +1,4 @@
-package main.kotlin.learn.kotlin.playground
+package learn.kotlin.playground
 
 import java.util.*
 
