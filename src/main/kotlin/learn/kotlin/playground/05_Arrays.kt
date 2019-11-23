@@ -9,9 +9,9 @@ fun main(args: Array<String>) {
     println(myArray)
     myArray[1] = 3.14
     println("Array length: ${myArray.size}")
-    println("Doug in Array: ${myArray.contains("Doug")}")
+    println("Doug in Array: ${myArray.contains<Any>("Doug")}")
 
     val partArray = myArray.copyOfRange(0, 1)
     println("First: ${myArray.first()}")
-    println("Artemas index: ${myArray.indexOf("Artemas")}")
+    println("Artemas index: ${myArray.indexOf<Any>("Artemas")}")
 }
