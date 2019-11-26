@@ -39,4 +39,17 @@ class CapitaliseNamesTest() {
         assertThat(capitalisedNames).hasSize(4)
         assertThat(capitalisedNames).containsExactly("ARTEMAS", "TAKUDZWA", "SHAWN", "SARAH")
     }
+
+    @Test
+    @DisplayName("Should return all capitalised names sorted")
+    fun returnCapitalisedNamesSorted() {
+        val names = listOf("artemas", "takudzwa", "muzanenhamo", "shawn", "sarah")
+        val capitalisedNames = capitaliseNames.capitalise(names)
+
+        val sortedNames = capitaliseNames.sortByAlphabet(capitalisedNames)
+
+        assertThat(sortedNames).isNotEmpty
+        assertThat(sortedNames).hasSize(5)
+        assertThat(sortedNames).containsExactly("ARTEMAS", "MUZANENHAMO", "SARAH", "SHAWN", "TAKUDZWA")
+    }
 }
