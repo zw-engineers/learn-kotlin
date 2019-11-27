@@ -8,9 +8,9 @@ class StudentTest {
 
     private val university: University = University()
     private val artemas = Student("artemas", "muzanenhamo", Degree("computer science"), Tutor("thomas", "jenkins"))
-    private val jane = Student("jane", "doe", Degree("computer science"), Tutor("carmelo", "anthony"))
-    private val mark = Student("mark", "thompson", Degree("computer science"), Tutor("kobe", "bryant"))
-    private val sarah = Student("sarah", "smith", Degree("computer science"), Tutor("lebron", "james"))
+    private val jane = Student("jane", "doe", Degree("pure mathematics"), Tutor("carmelo", "anthony"))
+    private val mark = Student("mark", "thompson", Degree("law"), Tutor("kobe", "bryant"))
+    private val sarah = Student("sarah", "smith", Degree("events management"), Tutor("lebron", "james"))
 
 
     @Test
@@ -21,5 +21,7 @@ class StudentTest {
         val csStudentsSorted = university.getCompScienceStudentsSortedByDegree(students)
 
         assertThat(csStudentsSorted).isNotEmpty
+        assertThat(csStudentsSorted).hasSize(4)
+        assertThat(csStudentsSorted).containsExactly(artemas, sarah, mark, jane)
     }
 }
