@@ -42,5 +42,6 @@ class StudentTest {
 
         assertThat(eventManagementStudents).isNotEmpty
         assertThat(eventManagementStudents).hasSize(4)
+        assertThat(eventManagementStudents).containsExactly(jess, kendrick, laura, sarah)
     }
 }

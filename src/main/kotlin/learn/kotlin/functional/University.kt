@@ -10,6 +10,7 @@ class University {
     fun getEventManagementStudentsSortedByDegreeTitle(students: List<Student?>?): List<Student?> {
         return students.orEmpty()
                 .filter { student -> EVENTS_MANAGEMENT == student?.degree?.title }
+                .sortedBy { student -> student?.degree?.title }
     }
 
     companion object {
