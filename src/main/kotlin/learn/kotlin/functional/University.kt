@@ -1,9 +1,19 @@
 package learn.kotlin.functional
 
 class University {
+
     fun getCompScienceStudentsSortedByDegree(students: List<Student>): List<Student> {
         return students
                 .sortedBy { student -> student.degree?.title }
+    }
+
+    fun getEventManagementStudentsSortedByDegreeTitle(students: List<Student?>?): List<Student?> {
+        return students.orEmpty()
+                .filter { student -> EVENTS_MANAGEMENT == student?.degree?.title }
+    }
+
+    companion object {
+        const val EVENTS_MANAGEMENT = "events management"
     }
 }
 
