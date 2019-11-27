@@ -2,7 +2,7 @@ package learn.kotlin.functional
 
 class University {
     fun getCompScienceStudentsSortedByDegree(students: List<Student>): List<Student> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return students
     }
 
 }
