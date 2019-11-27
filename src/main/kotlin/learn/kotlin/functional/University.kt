@@ -3,7 +3,7 @@ package learn.kotlin.functional
 class University {
     fun getCompScienceStudentsSortedByDegree(students: List<Student>): List<Student> {
         return students
-                .sortedBy { student -> student.degree.title }
+                .sortedBy { student -> student.degree?.title }
     }
 }
 
